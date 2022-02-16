@@ -38,8 +38,6 @@ public class GameManager : MonoBehaviour
     public GameObject Slider;
     public GameObject Slider_Fill;
     public GameObject Slider_background;
-
-    public Material[] material = new Material[2];
     public static ReceiveJsonObject apiform;
     private int flag;
     private bool roll;
@@ -167,13 +165,8 @@ public class GameManager : MonoBehaviour
     {
         if (roll)
         {
-            RollUnder.GetComponent<Image>().color = new Color32(0, 165, 255, 255);
-            RollOver.GetComponent<Image>().color = new Color32(255, 10, 25, 255);
-
-            Slider_background.GetComponent<Image>().color = new Color32(255, 10, 25, 255);
-            Slider_Fill.GetComponent<Image>().color = new Color32(0, 165, 255, 255);
-
-            TopBackground.GetComponent<MeshRenderer>().material = material[0];
+            Slider_background.GetComponent<Image>().color = new Color32(146, 79, 158, 255);
+            Slider_Fill.GetComponent<Image>().color = new Color32(123, 161, 78, 255);
 
             int value = Convert.ToInt32(Slider.GetComponent<Slider>().value * 100);
             if (value > 95)
@@ -190,13 +183,8 @@ public class GameManager : MonoBehaviour
     {
         if (!roll)
         {
-            RollUnder.GetComponent<Image>().color = new Color32(255, 10, 25, 255);
-            RollOver.GetComponent<Image>().color = new Color32(0, 165, 255, 255);
-
-            Slider_background.GetComponent<Image>().color = new Color32(0, 165, 255, 255);
-            Slider_Fill.GetComponent<Image>().color = new Color32(255, 10, 25, 255);
-
-            TopBackground.GetComponent<MeshRenderer>().material = material[1];
+            Slider_background.GetComponent<Image>().color = new Color32(123, 161, 78, 255);
+            Slider_Fill.GetComponent<Image>().color = new Color32(146, 79, 158, 255);
 
             int value = Convert.ToInt32(Slider.GetComponent<Slider>().value * 100);
             if (value < 4)

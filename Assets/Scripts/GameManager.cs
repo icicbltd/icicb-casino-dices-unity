@@ -317,7 +317,7 @@ public class GameManager : MonoBehaviour
                 TotalAmount.text = totalAmount.ToString("F2");
                 if (apiform.earnAmount > 0f)
                 {
-                    EarnAmount.text = "PROFIT ON WIN : " + apiform.earnAmount.ToString("F5") + " BTC";
+                    EarnAmount.text = apiform.earnAmount.ToString("F2");
                     Alert.text = "";
                     Alert.text = "YOU WIN!";
                     yield return new WaitForSeconds(2f);
@@ -325,9 +325,9 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
-                    EarnAmount.text = "PROFIT ON WIN : 0.00000 BTC";
+                    EarnAmount.text = "0.00";
                     Alert.text = "";
-                    Alert.text = "YOU LOSE!";
+                    Alert.text = "BETTER LUCK NEXT TIME!";
                     yield return new WaitForSeconds(2f);
                     Alert.text = "";
                 }

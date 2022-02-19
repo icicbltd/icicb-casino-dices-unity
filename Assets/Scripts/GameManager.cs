@@ -175,7 +175,7 @@ public class GameManager : MonoBehaviour
                 value = Convert.ToInt32(Slider.GetComponent<Slider>().value * 100);
             }
             Chance.text = value.ToString() + "%";
-            Reward.text = "X" + (98f / (value)).ToString("F4");
+            Reward.text = "X" + (98f / (value)).ToString("F2");
             roll = false;
         }
     }
@@ -193,7 +193,7 @@ public class GameManager : MonoBehaviour
                 value = Convert.ToInt32(Slider.GetComponent<Slider>().value * 100);
             }
             Chance.text = (99 - value).ToString() + "%";
-            Reward.text = "X" + (98f / (99 - value)).ToString("F4");
+            Reward.text = "X" + (98f / (99 - value)).ToString("F2");
             roll = true;
         }
     }
@@ -223,7 +223,7 @@ public class GameManager : MonoBehaviour
             }
             Chance.text = value.ToString() + "%";
             float reward_value = 98f / value;
-            Reward.text = "X" + reward_value.ToString("F4");
+            Reward.text = "X" + reward_value.ToString("F2");
         }
         else
         {
@@ -238,7 +238,7 @@ public class GameManager : MonoBehaviour
                 value = Convert.ToInt32(Slider.GetComponent<Slider>().value * 100);
             }
             Chance.text = (99 - value).ToString() + "%";
-            Reward.text = "X" + (98f / (99 - value)).ToString("F4");
+            Reward.text = "X" + (98f / (99 - value)).ToString("F2");
         }
     }
     public void PlayGame()
@@ -313,10 +313,10 @@ public class GameManager : MonoBehaviour
                 {
                     RandomValue.text = "0" + apiform.randomNumber.ToString();
                 }
-                totalAmount += apiform.earnAmount;
-                TotalAmount.text = totalAmount.ToString("F2");
                 if (apiform.earnAmount > 0f)
                 {
+                    totalAmount += apiform.earnAmount - betAmount;
+                    TotalAmount.text = totalAmount.ToString("F2");
                     EarnAmount.text = apiform.earnAmount.ToString("F2");
                     Alert.text = "";
                     Alert.text = "YOU WIN!";
@@ -325,6 +325,8 @@ public class GameManager : MonoBehaviour
                 }
                 else
                 {
+                    totalAmount -= betAmount;
+                    TotalAmount.text = totalAmount.ToString("F2");
                     EarnAmount.text = "0.00";
                     Alert.text = "";
                     Alert.text = "BETTER LUCK NEXT TIME!";

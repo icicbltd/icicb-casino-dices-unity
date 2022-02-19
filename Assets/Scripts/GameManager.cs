@@ -43,8 +43,6 @@ public class GameManager : MonoBehaviour
     private bool roll;
     private string BaseUrl = "http://83.136.219.243:3306";
     BetPlayer __player;
-
-    // Start is called before the first frame update
     void Start()
     {
         betAmount = 10.00f;
@@ -57,8 +55,6 @@ public class GameManager : MonoBehaviour
             GameReady("Ready");
 #endif
     }
-
-    // Update is called once per frame
     void Update()
     {
 
@@ -83,6 +79,7 @@ public class GameManager : MonoBehaviour
             if (totalAmount >= 2 * betAmount)
             {
                 betAmount = 2 * betAmount;
+                BetAmount.text = betAmount.ToString("F2");
             }
             else if (totalAmount < 10f)
             {
@@ -94,15 +91,15 @@ public class GameManager : MonoBehaviour
             }
             else
             {
-                betAmount = totalAmount;
+                betAmount = (int)Math.Floor(totalAmount);
+                BetAmount.text = betAmount.ToString("F2");
                 Alert.text = "";
-                Alert.text = "MAXIMUM BET LIMIT " + totalAmount.ToString("F2");
+                Alert.text = "MAXIMUM BET LIMIT " + betAmount.ToString("F2");
                 yield return new WaitForSeconds(2f);
                 Alert.text = "";
                 disable_increase.interactable = true;
 
             }
-            BetAmount.text = betAmount.ToString("F2");
             disable_increase.interactable = true;
         }
 
@@ -122,10 +119,12 @@ public class GameManager : MonoBehaviour
                 if (betAmount / 2 >= 10f)
                 {
                     betAmount = betAmount / 2;
+                    BetAmount.text = betAmount.ToString("F2");
                 }
                 else
                 {
                     betAmount = 10f;
+                    BetAmount.text = betAmount.ToString("F2");
                     Alert.text = "";
                     Alert.text = "MINIMUM BET LIMIT 10.00!";
                     yield return new WaitForSeconds(2f);
@@ -137,6 +136,7 @@ public class GameManager : MonoBehaviour
             else if (totalAmount < 10f)
             {
                 betAmount = 10f;
+                BetAmount.text = betAmount.ToString("F2");
                 Alert.text = "";
                 Alert.text = "MINIMUM BET LIMIT 10.00!";
                 yield return new WaitForSeconds(2f);
@@ -153,7 +153,7 @@ public class GameManager : MonoBehaviour
     }
     public void MAX()
     {
-        betAmount = totalAmount;
+        betAmount = (int)Math.Floor(totalAmount);
         BetAmount.text = betAmount.ToString("F2");
     }
     public void MIN()
@@ -305,7 +305,7 @@ public class GameManager : MonoBehaviour
             apiform = JsonUtility.FromJson<ReceiveJsonObject>(strdata);
             if (apiform.Message == "SUCCESS!")
             {
-                if (apiform.randomNumber > 10)
+                if (apiform.randomNumber >= 10)
                 {
                     RandomValue.text = apiform.randomNumber.ToString();
                 }

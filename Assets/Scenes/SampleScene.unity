@@ -38,7 +38,7 @@ RenderSettings:
   m_ReflectionIntensity: 1
   m_CustomReflection: {fileID: 0}
   m_Sun: {fileID: 705507994}
-  m_IndirectSpecularColor: {r: 0.44661158, g: 0.49645454, b: 0.57483727, a: 1}
+  m_IndirectSpecularColor: {r: 0.4407565, g: 0.4818176, b: 0.528451, a: 1}
   m_UseRadianceAmbientProbe: 0
 --- !u!157 &3
 LightmapSettings:
@@ -1461,8 +1461,8 @@ RectTransform:
   m_LocalEulerAnglesHint: {x: 0, y: 0, z: 0}
   m_AnchorMin: {x: 0, y: 0}
   m_AnchorMax: {x: 1, y: 1}
-  m_AnchoredPosition: {x: 0, y: 10}
-  m_SizeDelta: {x: 0, y: -20}
+  m_AnchoredPosition: {x: 0, y: 0}
+  m_SizeDelta: {x: 0, y: 0}
   m_Pivot: {x: 0.5, y: 0.5}
 --- !u!114 &317190897
 MonoBehaviour:
@@ -1547,7 +1547,7 @@ MonoBehaviour:
   m_VertexBufferAutoSizeReduction: 0
   m_useMaxVisibleDescender: 1
   m_pageToDisplay: 1
-  m_margin: {x: 0, y: 2.205658, z: 0, w: -16.910095}
+  m_margin: {x: 0, y: 2.205658, z: 0, w: 2.1943789}
   m_isUsingLegacyAnimationComponent: 0
   m_isVolumetricText: 0
   m_hasFontAssetChanged: 0
@@ -2064,11 +2064,11 @@ MonoBehaviour:
   m_faceColor:
     serializedVersion: 2
     rgba: 4294967295
-  m_fontSize: 17
+  m_fontSize: 19.1
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10
+  m_fontSizeMin: 5
   m_fontSizeMax: 25
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -2261,27 +2261,27 @@ PrefabInstance:
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 662d88a297a4da640bef1ec914c02746, type: 3}
       propertyPath: m_LocalScale.x
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 662d88a297a4da640bef1ec914c02746, type: 3}
       propertyPath: m_LocalScale.y
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 662d88a297a4da640bef1ec914c02746, type: 3}
       propertyPath: m_LocalScale.z
-      value: 3
+      value: 3.5
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 662d88a297a4da640bef1ec914c02746, type: 3}
       propertyPath: m_LocalPosition.x
-      value: 128.2
+      value: 128.3
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 662d88a297a4da640bef1ec914c02746, type: 3}
       propertyPath: m_LocalPosition.y
-      value: -71.2
+      value: -56.8
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 662d88a297a4da640bef1ec914c02746, type: 3}
       propertyPath: m_LocalPosition.z
-      value: -800.6
+      value: -759.2
       objectReference: {fileID: 0}
     - target: {fileID: -8679921383154817045, guid: 662d88a297a4da640bef1ec914c02746, type: 3}
       propertyPath: m_LocalRotation.w
@@ -2690,13 +2690,13 @@ Transform:
   m_PrefabInstance: {fileID: 0}
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 705507993}
-  m_LocalRotation: {x: 0.36406225, y: -0.4961829, z: 0.2142857, w: 0.7585136}
+  m_LocalRotation: {x: 0.018024432, y: -0.2184384, z: 0.40218785, w: 0.8889346}
   m_LocalPosition: {x: -72, y: 3, z: -42}
   m_LocalScale: {x: 1, y: 1, z: 1}
   m_Children: []
   m_Father: {fileID: 0}
   m_RootOrder: 1
-  m_LocalEulerAnglesHint: {x: 49.902, y: -67.881, z: -3.222}
+  m_LocalEulerAnglesHint: {x: 371.991, y: 337.53, z: 46.297}
 --- !u!1 &715089371
 GameObject:
   m_ObjectHideFlags: 0
@@ -3493,7 +3493,7 @@ Transform:
   m_PrefabAsset: {fileID: 0}
   m_GameObject: {fileID: 943036513}
   m_LocalRotation: {x: -0, y: -0.7071068, z: 0.7071068, w: 0}
-  m_LocalPosition: {x: 130, y: 0.5960388, z: -509.28308}
+  m_LocalPosition: {x: 130, y: 1, z: -754}
   m_LocalScale: {x: 84.700005, y: 76.4, z: 54.400005}
   m_Children: []
   m_Father: {fileID: 143366119}
@@ -4316,7 +4316,7 @@ MonoBehaviour:
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 5
+  m_fontSizeMin: 10
   m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 1
@@ -4987,7 +4987,7 @@ MonoBehaviour:
   m_fontSizeBase: 30
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 5
+  m_fontSizeMin: 10
   m_fontSizeMax: 18
   m_fontStyle: 0
   m_HorizontalAlignment: 2
@@ -6433,7 +6433,7 @@ MonoBehaviour:
   m_fontSizeBase: 36
   m_fontWeight: 400
   m_enableAutoSizing: 1
-  m_fontSizeMin: 10
+  m_fontSizeMin: 5
   m_fontSizeMax: 25
   m_fontStyle: 0
   m_HorizontalAlignment: 2
